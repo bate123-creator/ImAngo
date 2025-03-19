@@ -18,7 +18,7 @@ import open_im_sdk.Open_im_sdk
 class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        Open_im_sdk.getSdkVersion()
     }
 }
 
