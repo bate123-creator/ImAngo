@@ -1,7 +1,4 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.kotlin.android) apply false
     id 'maven-publish'
     id 'java'
 }
@@ -12,15 +9,15 @@ version = '1.0.0'
 publishing {
     publications {
         aar(MavenPublication) {
-            groupId 'com.github.bate123-creator'
-            artifactId 'im-library'
-            version '1.0.0'
+            groupId = 'com.github.bate123-creator'
+            artifactId = 'im-library'
+            version = '1.0.0'
 
             artifact file('app/libs/open_im_sdk.aar')
 
             pom {
                 name = 'im Library'
-                description = 'A description of the hello library'
+                description = 'A description of the im library'
                 url = 'http://www.example.com/im-library'
                 licenses {
                     license {
@@ -44,3 +41,4 @@ publishing {
         }
     }
 }
+
