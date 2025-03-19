@@ -2,4 +2,45 @@
 plugins {
 alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
+    id 'maven-publish'
+    id 'java'
+}
+
+group = 'com.github.bate123-creator'
+version = '1.0.0'
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId 'com.github.bate123-creator'
+            artifactId 'im-library'
+            version '1.0.0'
+
+            artifact file('app/libs/open_im_sdk.aar')
+
+            pom {
+                name = 'im Library'
+                description = 'A description of the hello library'
+                url = 'http://www.example.com/im-library'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'bate123-creator'
+                        name = 'bate'
+                        email = 'bate6457@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/bate123-creator/ImAngo.git'
+                    developerConnection = 'scm:git:ssh://github.com:bate123-creator/ImAngo.git'
+                    url = 'http://github.com/bate123-creator/ImAngo/'
+                }
+            }
+        }
+    }
 }
