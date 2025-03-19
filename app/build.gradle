@@ -57,6 +57,7 @@ dependencies {
     implementation libs.androidx.ui.tooling.preview
     implementation libs.androidx.material3
     implementation files('libs/open_im_sdk.aar')
+    implementation 'com.github.bate123-creator:ImAngo:1.0.0'
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
